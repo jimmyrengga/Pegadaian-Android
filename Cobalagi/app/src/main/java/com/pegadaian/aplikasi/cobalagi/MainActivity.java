@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
         //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
       //  fab.setOnClickListener(new View.OnClickListener() {
             //@Override
@@ -45,13 +46,17 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
+        // Disable going back to the MainActivity
+        moveTaskToBack(true);
     }
+    //public void onBackPressed() {
+     //   DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+     //   if (drawer.isDrawerOpen(GravityCompat.START)) {
+     //       drawer.closeDrawer(GravityCompat.START);
+     //   } else {
+      //      super.onBackPressed();
+       // }
+   // }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -90,7 +95,8 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_logout) {
 
-            finish();
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
 
         }
 
@@ -98,4 +104,6 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }

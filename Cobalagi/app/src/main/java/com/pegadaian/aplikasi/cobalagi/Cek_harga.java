@@ -58,13 +58,17 @@ public class Cek_harga extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
+        // Disable going back to the MainActivity
+        moveTaskToBack(true);
     }
+    //public void onBackPressed() {
+      //  DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        //if (drawer.isDrawerOpen(GravityCompat.START)) {
+          //  drawer.closeDrawer(GravityCompat.START);
+        //} else {
+          //  super.onBackPressed();
+        //}
+    //}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -91,7 +95,7 @@ public class Cek_harga extends AppCompatActivity
     @Override
     public void onClick(View v) {
         // TODO Auto-generated method stub
-            hsl.setText("Binggung Yahh !! ...");
+            hsl.setText("Kosong");
         }
 
 
@@ -114,7 +118,8 @@ public class Cek_harga extends AppCompatActivity
 
         } else if (id == R.id.nav_logout) {
 
-            finish();
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
 
         }
 

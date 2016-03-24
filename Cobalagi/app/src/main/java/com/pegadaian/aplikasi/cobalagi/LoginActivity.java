@@ -61,7 +61,6 @@ public class LoginActivity extends ActivityHelper {
 //                if (!validateEmail(username)) {
 //                    usernameWrapper.setError("Not a valid email address!");
                 if (!validatePassword(password)) {
-
                     passwordWrapper.setError("Not a valid password!");
                 } else {
                     usernameWrapper.setErrorEnabled(false);

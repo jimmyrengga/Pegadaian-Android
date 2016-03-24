@@ -1,7 +1,12 @@
 package com.pegadaian.aplikasi.cobalagi.service;
 
+<<<<<<< HEAD
 import com.pegadaian.aplikasi.cobalagi.domain.Cabang;
+=======
+
+>>>>>>> 7bc0813662a335c21b8181758b6fa6f3b0b20807
 import com.pegadaian.aplikasi.cobalagi.domain.CekHarga;
+import com.pegadaian.aplikasi.cobalagi.domain.Emas;
 
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.springframework.http.HttpEntity;
@@ -15,11 +20,18 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.List;
+import java.util.Map;
+
 /**
  * Created by opaw on 3/18/16.
  */
 public class HttpService {
+<<<<<<< HEAD
     private static String HOST = "http://192.168.1.170:8080/pegadaian/";
+=======
+    private static String HOST = "http://192.168.1.32:8080/pegadaian/";
+>>>>>>> 7bc0813662a335c21b8181758b6fa6f3b0b20807
     private static String BASE_URI =  HOST + "/api/";
     private RestTemplate restTemplate = new RestTemplate();
     private static String TAG = "HTTP SERVICE";
@@ -54,10 +66,18 @@ public class HttpService {
         return restTemplate.exchange(url, HttpMethod.GET, entity, CekHarga.class);
     }
 
+<<<<<<< HEAD
     public ResponseEntity cariCabang (String cookie){
         String url = BASE_URI + "cabang";
         HttpEntity entity = buildHttpEntityRequest(cookie);
 //        return restTemplate.exchange(url, HttpMethod.GET, entity, Cabang.class);
         return restTemplate.getForEntity(url, Cabang[].class);
+=======
+    public ResponseEntity hargaMas (String cookie){
+        String url = BASE_URI + "emas";
+        HttpEntity entity = buildHttpEntityRequest(cookie);
+//        return  restTemplate.exchange(url, HttpMethod.GET, entity, Emas.class);
+        return restTemplate.getForEntity(url, Emas[].class);
+>>>>>>> 7bc0813662a335c21b8181758b6fa6f3b0b20807
     }
 }

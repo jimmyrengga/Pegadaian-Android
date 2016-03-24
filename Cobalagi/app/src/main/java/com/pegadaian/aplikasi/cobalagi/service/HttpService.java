@@ -23,7 +23,7 @@ import java.util.Map;
  * Created by opaw on 3/18/16.
  */
 public class HttpService {
-    private static String HOST = "http://192.168.1.32:8080/pegadaian/";
+    private static String HOST = "http://pegadaian-preorder.rhcloud.com/pegadaian";
     private static String BASE_URI =  HOST + "/api/";
     private RestTemplate restTemplate = new RestTemplate();
     private static String TAG = "HTTP SERVICE";

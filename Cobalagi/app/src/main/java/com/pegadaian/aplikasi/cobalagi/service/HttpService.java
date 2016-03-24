@@ -1,6 +1,7 @@
 package com.pegadaian.aplikasi.cobalagi.service;
 
 
+import com.pegadaian.aplikasi.cobalagi.domain.Cabang;
 import com.pegadaian.aplikasi.cobalagi.domain.CekHarga;
 import com.pegadaian.aplikasi.cobalagi.domain.Emas;
 

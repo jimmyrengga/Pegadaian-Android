@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <android.support.v4.widget.SwipeRefreshLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
-android:id="@+id/swipe_refresh_layout"
-android:layout_width="match_parent"
-android:layout_height="wrap_content">
-
-
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.pegadaian.aplikasi.cobalagi.MainActivity"
     tools:showIn="@layout/app_bar_main"
+    tools:context="com.pegadaian.aplikasi.cobalagi.MainActivity"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/swipe_refresh_layout">
 
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    >
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -29,390 +26,390 @@ android:layout_height="wrap_content">
     android:background="#E8EAEB"
     >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:orientation="horizontal"
-        >
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="0.2"
-            android:text="Update:"
-            android:gravity="center"
-            android:textColor="#009688"
-            />
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="0.8"
-            android:text="-"
-            android:id="@+id/tglUpdate"
-            android:gravity="center"
-            android:background="#009688"
-            android:textColor="@android:color/white"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/line1"
-        android:layout_width="fill_parent"
-        android:layout_height="1dip"
-        android:layout_marginTop="6dp"
-        android:layout_marginBottom="6dp"
-        android:background="@android:color/background_dark"
-        android:orientation="horizontal" >
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginBottom="6dp"
-        >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Tabungan Emas Pegadaian"
-            android:background="#009688"
-            android:textColor="@android:color/white"
-            android:gravity="center"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_marginBottom="6dp"
-        >
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            android:background="@android:color/white"
-            android:orientation="vertical"
-            >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Harga Jual"
-                android:gravity="center"
-                android:layout_marginBottom="15dp"
-                android:textColor="#9A9B9C"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:id="@+id/txtHargaJual"
-                android:gravity="center"
-                android:textSize="20sp"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="per 0,01 gram"
-                android:gravity="center"
-                android:textSize="12sp"
-                android:textColor="#9A9B9C"
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            android:background="#009688"
-            android:orientation="vertical"
-            >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Harga Beli"
-                android:gravity="center"
-                android:textColor="@android:color/white"
-                android:layout_marginBottom="15dp"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:id="@+id/txtHargaBeli"
-                android:textColor="@android:color/white"
-                android:gravity="center"
-                android:textSize="20sp"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="per 0,01 gram"
-                android:textColor="@android:color/white"
-                android:gravity="center"
-                android:textSize="12sp"
-                />
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <!--line-->
-    <LinearLayout
-        android:id="@+id/line2"
-        android:layout_width="fill_parent"
-        android:layout_height="1dip"
-        android:layout_marginTop="6dp"
-        android:layout_marginBottom="6dp"
-        android:background="#EDD02D"
-        android:orientation="horizontal" >
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="#EDD02D"
-        android:layout_marginBottom="6dp"
-        >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Harga Dasar Emas Mulia Pegadaian"
-            android:textColor="@android:color/white"
-            android:gravity="center"
-            />
-    </LinearLayout>
-
-    <!--Harga dasar emas mulia 1-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_marginBottom="6dp">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.3"
-            android:background="@android:color/white"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:id="@+id/imageView1"
-                android:src="@drawable/gold"
-                android:scaleType="fitCenter"
-                android:layout_gravity="center"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="5 Gram"
-                android:gravity="bottom|center"
-                android:textColor="#929494"
-                android:layout_marginBottom="3dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:text="0"
-                android:id="@+id/txtHargaLimaGram"
-                android:gravity="center_horizontal"
-                android:background="#EDD02D"
-                android:textColor="@android:color/white"
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.3"
-            android:background="@android:color/white"
-            android:layout_marginLeft="5dp"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:id="@+id/imageView2"
-                android:src="@drawable/gold"
-                android:scaleType="fitCenter"
-                android:layout_gravity="center"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="10 Gram"
-                android:gravity="bottom|center"
-                android:textColor="#929494"
-                android:layout_marginBottom="3dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:text="0"
-                android:id="@+id/txtHargaSepuluhGram"
-                android:gravity="center_horizontal"
-                android:textColor="@android:color/white"
-                android:background="#EDD02D"/>
-        </LinearLayout>
-    </LinearLayout>
-
-    <!--Harga dasar emas mulia 2-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_marginBottom="6dp">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.3"
-            android:background="@android:color/white"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:id="@+id/imageView3"
-                android:src="@drawable/gold"
-                android:scaleType="fitCenter"
-                android:layout_gravity="center"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="25 Gram"
-                android:textColor="#929494"
-                android:gravity="bottom|center"
-                android:layout_marginBottom="3dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:text="0"
-                android:id="@+id/txtHargaDuaPuluhLimaGram"
-                android:gravity="center_horizontal"
-                android:textColor="@android:color/white"
-                android:background="#EDD02D"
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.3"
-            android:background="@android:color/white"
-            android:layout_marginLeft="5dp"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:id="@+id/imageView4"
-                android:src="@drawable/gold"
-                android:scaleType="fitCenter"
-                android:layout_gravity="center"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="50 Gram"
-                android:textColor="#929494"
-                android:gravity="bottom|center"
-                android:layout_marginBottom="3dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:text="0"
-                android:id="@+id/txtHargaLimaPuluhGram"
-                android:gravity="center_horizontal"
-                android:textColor="@android:color/white"
-                android:background="#EDD02D"/>
-        </LinearLayout>
-    </LinearLayout>
-
-    <!--Harga dasar emas mulia 3-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_marginBottom="6dp">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.3"
-            android:background="@android:color/white"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:id="@+id/imageView5"
-                android:src="@drawable/gold"
-                android:scaleType="fitCenter"
-                android:layout_gravity="center"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="100 Gram"
-                android:textColor="#929494"
-                android:gravity="bottom|center"
-                android:layout_marginBottom="3dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:text="0"
-                android:id="@+id/txtHargaSeratusGram"
-                android:textColor="@android:color/white"
-                android:gravity="center_horizontal"
-                android:background="#EDD02D"
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.3"
-            android:background="@android:color/white"
-            android:layout_marginLeft="5dp"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:id="@+id/imageView6"
-                android:src="@drawable/gold"
-                android:scaleType="fitCenter"
-                android:layout_gravity="center"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="250 Gram"
-                android:gravity="bottom|center"
-                android:textColor="#929494"
-                android:layout_marginBottom="3dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:text="0"
-                android:id="@+id/txtHargaDuaRatusLimaPuluhGram"
-                android:gravity="center_horizontal"
-                android:textColor="@android:color/white"
-                android:background="#EDD02D"/>
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="0.3"
-        android:background="@android:color/white"
-        android:layout_marginLeft="5dp"
-        android:orientation="vertical">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:id="@+id/imageView7"
-            android:src="@drawable/gold"
-            android:scaleType="fitCenter"
-            android:layout_gravity="center"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="1 KG"
-            android:gravity="bottom|center"
-            android:textColor="#929494"
-            android:layout_marginBottom="3dp"/>
-        <TextView
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:text="0"
-            android:id="@+id/txtHargaSatuKiloGram"
-            android:gravity="center_horizontal"
-            android:textColor="@android:color/white"
-            android:background="#EDD02D"/>
-    </LinearLayout>
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.2"
+                android:text="Update:"
+                android:gravity="center"
+                android:textColor="#009688"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.8"
+                android:text="-"
+                android:id="@+id/tglUpdate"
+                android:gravity="center"
+                android:background="#009688"
+                android:textColor="@android:color/white"
+                />
+        </LinearLayout>
 
-</LinearLayout>
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@android:color/background_dark"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginBottom="6dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Tabungan Emas Pegadaian"
+                android:background="#009688"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="6dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Harga Jual"
+                    android:gravity="center"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="#9A9B9C"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:id="@+id/txtHargaJual"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="per 0,01 gram"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="#9A9B9C"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="#009688"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Harga Beli"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="15dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:id="@+id/txtHargaBeli"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="per 0,01 gram"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--line-->
+        <LinearLayout
+            android:id="@+id/line2"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="#EDD02D"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#EDD02D"
+            android:layout_marginBottom="6dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Harga Dasar Emas Mulia Pegadaian"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+        <!--Harga dasar emas mulia 1-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="6dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/imageView1"
+                    android:src="@drawable/gold"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5 Gram"
+                    android:gravity="bottom|center"
+                    android:textColor="#929494"
+                    android:layout_marginBottom="3dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="0"
+                    android:id="@+id/txtHargaLimaGram"
+                    android:gravity="center_horizontal"
+                    android:background="#EDD02D"
+                    android:textColor="@android:color/white"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:background="@android:color/white"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/imageView2"
+                    android:src="@drawable/gold"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10 Gram"
+                    android:gravity="bottom|center"
+                    android:textColor="#929494"
+                    android:layout_marginBottom="3dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="0"
+                    android:id="@+id/txtHargaSepuluhGram"
+                    android:gravity="center_horizontal"
+                    android:textColor="@android:color/white"
+                    android:background="#EDD02D"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--Harga dasar emas mulia 2-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="6dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/imageView3"
+                    android:src="@drawable/gold"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="25 Gram"
+                    android:textColor="#929494"
+                    android:gravity="bottom|center"
+                    android:layout_marginBottom="3dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="0"
+                    android:id="@+id/txtHargaDuaPuluhLimaGram"
+                    android:gravity="center_horizontal"
+                    android:textColor="@android:color/white"
+                    android:background="#EDD02D"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:background="@android:color/white"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/imageView4"
+                    android:src="@drawable/gold"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="50 Gram"
+                    android:textColor="#929494"
+                    android:gravity="bottom|center"
+                    android:layout_marginBottom="3dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="0"
+                    android:id="@+id/txtHargaLimaPuluhGram"
+                    android:gravity="center_horizontal"
+                    android:textColor="@android:color/white"
+                    android:background="#EDD02D"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--Harga dasar emas mulia 3-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="6dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/imageView5"
+                    android:src="@drawable/gold"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="100 Gram"
+                    android:textColor="#929494"
+                    android:gravity="bottom|center"
+                    android:layout_marginBottom="3dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="0"
+                    android:id="@+id/txtHargaSeratusGram"
+                    android:textColor="@android:color/white"
+                    android:gravity="center_horizontal"
+                    android:background="#EDD02D"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:background="@android:color/white"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/imageView6"
+                    android:src="@drawable/gold"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="250 Gram"
+                    android:gravity="bottom|center"
+                    android:textColor="#929494"
+                    android:layout_marginBottom="3dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="0"
+                    android:id="@+id/txtHargaDuaRatusLimaPuluhGram"
+                    android:gravity="center_horizontal"
+                    android:textColor="@android:color/white"
+                    android:background="#EDD02D"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@android:color/white"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/imageView7"
+                android:src="@drawable/gold"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1 KG"
+                android:gravity="bottom|center"
+                android:textColor="#929494"
+                android:layout_marginBottom="3dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="0"
+                android:id="@+id/txtHargaSatuKiloGram"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:background="#EDD02D"/>
+        </LinearLayout>
+
+    </LinearLayout>
 </ScrollView>
 </android.support.v4.widget.SwipeRefreshLayout>

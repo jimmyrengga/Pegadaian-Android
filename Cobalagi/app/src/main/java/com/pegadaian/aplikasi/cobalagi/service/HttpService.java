@@ -1,6 +1,8 @@
 package com.pegadaian.aplikasi.cobalagi.service;
 
+
 import com.pegadaian.aplikasi.cobalagi.domain.CekHarga;
+import com.pegadaian.aplikasi.cobalagi.domain.Emas;
 
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.springframework.http.HttpEntity;
@@ -14,11 +16,14 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.List;
+import java.util.Map;
+
 /**
  * Created by opaw on 3/18/16.
  */
 public class HttpService {
-    private static String HOST = "http://192.168.1.35:8080";
+    private static String HOST = "http://192.168.1.32:8080/pegadaian/";
     private static String BASE_URI =  HOST + "/api/";
     private RestTemplate restTemplate = new RestTemplate();
     private static String TAG = "HTTP SERVICE";
@@ -51,5 +56,12 @@ public class HttpService {
         String url = BASE_URI + "cekharga";
         HttpEntity entity = buildHttpEntityRequest(cookie);
         return restTemplate.exchange(url, HttpMethod.GET, entity, CekHarga.class);
+    }
+
+    public ResponseEntity hargaMas (String cookie){
+        String url = BASE_URI + "emas";
+        HttpEntity entity = buildHttpEntityRequest(cookie);
+//        return  restTemplate.exchange(url, HttpMethod.GET, entity, Emas.class);
+        return restTemplate.getForEntity(url, Emas[].class);
     }
 }

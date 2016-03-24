@@ -58,10 +58,9 @@ public class LoginActivity extends ActivityHelper {
 
                 String username = usernameWrapper.getEditText().getText().toString();
                 String password = usernameWrapper.getEditText().getText().toString();
-                if (!validateEmail(username)) {
-                    usernameWrapper.setError("Not a valid email address!");
-                } else if (!validatePassword(password)) {
-
+//                if (!validateEmail(username)) {
+//                    usernameWrapper.setError("Not a valid email address!");
+                if (!validatePassword(password)) {
                     passwordWrapper.setError("Not a valid password!");
                 } else {
                     usernameWrapper.setErrorEnabled(false);
@@ -93,7 +92,7 @@ public class LoginActivity extends ActivityHelper {
     }
 
     public boolean validatePassword(String password) {
-        return password.length() > 5;
+        return password.length() > 0;
     }
 
     public boolean validateEmail(String email) {
@@ -178,5 +177,4 @@ public class LoginActivity extends ActivityHelper {
             }
         }
     }
-
 }

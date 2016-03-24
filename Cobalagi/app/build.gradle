@@ -36,7 +36,7 @@ dependencies {
     compile 'com.fasterxml.jackson.core:jackson-databind:2.6.1'
     compile 'com.google.code.gson:gson:2.2.4'
     compile group: 'org.apache.httpcomponents' , name: 'httpclient-android' , version: '4.3.5.1'
-
+    compile 'com.android.support:support-v4:21.0.+'
 }
 
 repositories {

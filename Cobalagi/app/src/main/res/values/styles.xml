@@ -24,5 +24,127 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="LayoutMatchParent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
 
+    <style name="LayoutWrapContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="LayoutFillParent">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="LayoutMatchParent.Vertical">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="ComponentLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="DefaultLayout" parent="LayoutMatchParent.Vertical">
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:clickable">false</item>
+        <item name="android:descendantFocusability">beforeDescendants</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="ScrollableLayout" parent="ComponentLayout">
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:clickable">false</item>
+        <item name="android:descendantFocusability">beforeDescendants</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="Panel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/panel_bg</item>
+    </style>
+
+    <style name="Panel.Vertical">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="Panel.Horizontal">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="Line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+    </style>
+
+    <style name="Line.White">
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="Line.Black">
+        <item name="android:background">@color/primary_dark_material_light</item>
+    </style>
+
+    <style name="LineHorizontal">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="LineHorizontal.Black">
+        <item name="android:background">@color/primary_dark_material_light</item>
+    </style>
+    <style name="WhiteSpaceHorizontal">
+        <item name="android:layout_width">16dp</item>
+        <item name="android:layout_height">0.5dp</item>
+    </style>
+
+    <style name="WhiteSpaceVertical">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">16dp</item>
+    </style>
+    <style name="Text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="Text.Date">
+        <item name="android:textColor">@color/switch_thumb_disabled_material_dark</item>
+        <item name="android:textSize">@dimen/abc_text_size_caption_material</item>
+        <item name="android:gravity">right</item>
+    </style>
+
+    <style name="Text.Headline">
+        <item name="android:textColor">@color/primary_material_dark</item>
+        <item name="android:textSize">@dimen/abc_text_size_headline_material</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+    </style>
+
+    <style name="Text.Title">
+        <item name="android:textColor">@color/primary_material_dark</item>
+        <item name="android:textSize">@dimen/abc_text_size_title_material</item>
+        <item name="android:fontFamily">sans-serif-normal</item>
+    </style>
+
+    <style name="Text.Caption">
+        <item name="android:padding">0dp</item>
+        <item name="android:textSize">@dimen/abc_text_size_small_material</item>
+        <item name="android:textColor">@color/primary_material_dark</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Label">
+        <item name="android:padding">0dp</item>
+        <item name="android:textSize">@dimen/abc_text_size_caption_material</item>
+        <item name="android:textColor">@color/primary_dark_material_light</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

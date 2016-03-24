@@ -93,6 +93,11 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, Cek_harga.class);
             startActivity(intent);
 
+        } else if (id == R.id.nav_caricabang) {
+
+            Intent intent = new Intent(this, Cari_cabang.class);
+            startActivity(intent);
+
         } else if (id == R.id.nav_logout) {
 
             Intent intent = new Intent(this, LoginActivity.class);

@@ -1,5 +1,6 @@
 package com.pegadaian.aplikasi.cobalagi.service;
 
+import com.pegadaian.aplikasi.cobalagi.domain.Cabang;
 import com.pegadaian.aplikasi.cobalagi.domain.CekHarga;
 
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -18,7 +19,7 @@ import org.springframework.web.client.RestTemplate;
  * Created by opaw on 3/18/16.
  */
 public class HttpService {
-    private static String HOST = "http://192.168.1.35:8080";
+    private static String HOST = "http://192.168.1.170:8080/pegadaian/";
     private static String BASE_URI =  HOST + "/api/";
     private RestTemplate restTemplate = new RestTemplate();
     private static String TAG = "HTTP SERVICE";
@@ -51,5 +52,12 @@ public class HttpService {
         String url = BASE_URI + "cekharga";
         HttpEntity entity = buildHttpEntityRequest(cookie);
         return restTemplate.exchange(url, HttpMethod.GET, entity, CekHarga.class);
+    }
+
+    public ResponseEntity cariCabang (String cookie){
+        String url = BASE_URI + "cabang";
+        HttpEntity entity = buildHttpEntityRequest(cookie);
+//        return restTemplate.exchange(url, HttpMethod.GET, entity, Cabang.class);
+        return restTemplate.getForEntity(url, Cabang[].class);
     }
 }

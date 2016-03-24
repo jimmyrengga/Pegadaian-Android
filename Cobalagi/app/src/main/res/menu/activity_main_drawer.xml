@@ -10,6 +10,9 @@
             android:id="@+id/nav_harga"
             android:title="Cek Harga" />
         <item
+            android:id="@+id/nav_caricabang"
+            android:title="Cari Cabang" />
+        <item
             android:id="@+id/nav_logout"
             android:title="Logout" />
     </group>

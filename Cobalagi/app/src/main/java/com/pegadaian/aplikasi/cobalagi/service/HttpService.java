@@ -58,6 +58,13 @@ public class HttpService {
         return restTemplate.exchange(url, HttpMethod.GET, entity, CekHarga.class);
     }
 
+	public ResponseEntity cariCabang (String cookie){
+        String url = BASE_URI + "cabang";
+        HttpEntity entity = buildHttpEntityRequest(cookie);
+//        return restTemplate.exchange(url, HttpMethod.GET, entity, Cabang.class);
+        return restTemplate.getForEntity(url, Cabang[].class);
+	}
+
     public ResponseEntity hargaMas (String cookie){
         String url = BASE_URI + "emas";
         HttpEntity entity = buildHttpEntityRequest(cookie);

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Panel.Vertical"
+    android:layout_margin="16dp">
+    <TextView style="@style/Text.Label"
+        android:text="Cabang Pegadaian"
+        android:gravity="center"
+        android:padding="4dp"/>
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="UPC JATI WARINGIN"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:id="@+id/list_cabang_nama_cabang"/>
+    <View style="@style/Line.Black" />
+    <LinearLayout style="@style/ComponentLayout"
+        android:orientation="horizontal">
+        <LinearLayout style="@style/ComponentLayout"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView style="@style/Text.Label"
+                android:text="Provinsi"
+                android:padding="8dp"/>
+            <TextView style="@style/Text.Caption"
+                android:text="DKI Jakarta"
+                android:textColor="@color/colorPrimary"
+                android:padding="8dp"
+                android:id="@+id/list_cabang_provinsi" />
+        </LinearLayout>
+        <View style="@style/LineHorizontal.Black" />
+        <LinearLayout style="@style/ComponentLayout"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView style="@style/Text.Label"
+                android:text="Kota / Kabupaten"
+                android:padding="8dp"/>
+            <TextView style="@style/Text.Caption"
+                android:text="Jakarta Timur"
+                android:textColor="@color/colorPrimary"
+                android:padding="8dp"
+                android:id="@+id/list_cabang_kota"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View style="@style/Line.Black" />
+    <LinearLayout style="@style/ComponentLayout"
+        android:orientation="horizontal">
+        <LinearLayout style="@style/ComponentLayout"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView style="@style/Text.Label"
+                android:text="Kecamatan"
+                android:padding="8dp"/>
+            <TextView style="@style/Text.Caption"
+                android:text="Makassar"
+                android:textColor="@color/colorPrimary"
+                android:padding="8dp"
+                android:id="@+id/list_cabang_kecamatan"/>
+        </LinearLayout>
+        <View style="@style/LineHorizontal.Black" />
+        <LinearLayout style="@style/ComponentLayout"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView style="@style/Text.Label"
+                android:text="Kelurahan"
+                android:padding="8dp"/>
+            <TextView style="@style/Text.Caption"
+                android:text="Cipinang Melayu"
+                android:textColor="@color/colorPrimary"
+                android:padding="8dp"
+                android:id="@+id/list_cabang_kelurahan"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

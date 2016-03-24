@@ -177,4 +177,5 @@ public class LoginActivity extends ActivityHelper {
             }
         }
     }
+
 }
